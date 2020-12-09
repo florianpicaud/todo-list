@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
+
+* {
+  margin: 0;
+}
+
+.app {
+  --primary-color: #13419b;
+  --primary-hover-color: #0f186e;
+  --secondary-color: #c8d72c;
+  --secondary-hover-color: #97a314;
+  --light-background-color: #f7f9fb;
+  --text-color: #191919;
+
+  color: var(--text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+
+  background-color: var(--light-background-color);
+  height: 100vh;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+  letter-spacing: 0.39px;
+}
+
+.text-centered {
+  text-align: center;
+}

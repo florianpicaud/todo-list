@@ -1,0 +1,26 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  height: 64px;
+  max-width: 320px;
+}
+
+.input__input {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 16px;
+  height: 40px;
+}
+
+.input__input::placeholder {
+  color: rgba(25, 25, 25, 0.3);
+}
+
+.input__input:active,
+.input__input:focus {
+  border: 1px solid var(--primary-color);
+  box-sizing: border-box;
+  outline: 1px solid rgba(19, 65, 155, 0.1);
+}

@@ -1,0 +1,24 @@
+.todo {
+  text-align: left;
+  margin-top: 8px;
+  background-color: transparent;
+  border: 2px solid #ffafa2;
+  color: #ffafa2;
+  padding: 10px;
+  border-radius: 6px;
+}
+.todo-text {
+  font-size: 22px;
+  font-family: inherit;
+}
+
+.todo-delete {
+  float: right;
+  padding: 0px 4px;
+  cursor: pointer;
+}
+
+.todo-delete:hover {
+  background-color: #ffafa21c;
+  border-radius: 6px;
+}
