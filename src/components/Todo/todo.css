@@ -1,24 +1,31 @@
 .todo {
-  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
   margin-top: 8px;
-  background-color: transparent;
-  border: 2px solid #ffafa2;
-  color: #ffafa2;
+  text-align: left;
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid #e6e6e6;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 4px;
+  justify-content: space-between;
 }
+
+.todo:hover {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
 .todo-text {
-  font-size: 22px;
   font-family: inherit;
 }
 
 .todo-delete {
-  float: right;
-  padding: 0px 4px;
+  color: #e6e6e6;
   cursor: pointer;
 }
 
 .todo-delete:hover {
-  background-color: #ffafa21c;
+  color: #b3b3b3;
   border-radius: 6px;
 }

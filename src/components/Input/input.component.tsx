@@ -12,7 +12,7 @@ export default class Input extends React.Component<InputProps> {
 
     render(){
         return (
-        <div className="input">
+        <div className="d-flex flex-column input">
             <label className="input__label">{this.props.label}</label>
             <input 
                 value={this.props.value}

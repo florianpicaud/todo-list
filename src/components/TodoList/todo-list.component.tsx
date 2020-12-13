@@ -46,15 +46,19 @@ export default class TodoListComponent extends React.Component<{}, TodoListState
     render(){
         return (
             <div className="todolist">
-              <TitleComponent name={this.state.name} />
-              <FormComponent
-                inputValue={this.state.inputValue}
-                setInputValue={this.setInputValue.bind(this)}
-                handleSubmit={this.handleSubmit.bind(this)}
-              />
-              {this.state.todos.map((todo, index) => (
-                <TodoComponent todo={todo} index={index} handleDeleteTodo={this.handleDeleteTodo.bind(this)} />
-              ))}
+                <div className="flex-column header">
+                    <TitleComponent name={this.state.name} />
+                    <FormComponent
+                        inputValue={this.state.inputValue}
+                        setInputValue={this.setInputValue.bind(this)}
+                        handleSubmit={this.handleSubmit.bind(this)}
+                    />
+                </div>
+                <div className="content">
+                    {this.state.todos.map((todo, index) => (
+                        <TodoComponent todo={todo} index={index} handleDeleteTodo={this.handleDeleteTodo.bind(this)} />
+                    ))}
+                </div>
             </div>
           );
     }

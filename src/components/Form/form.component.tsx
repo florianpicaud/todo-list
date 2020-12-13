@@ -9,7 +9,25 @@ type FormProps = {
     handleSubmit: () => void;
 }
 
-export default class FormComponent extends React.Component<FormProps> {
+type FormState = {
+    disabled: boolean;
+}
+
+export default class FormComponent extends React.Component<FormProps, FormState> {
+
+    state: FormState = {
+        disabled: true
+    }
+
+    componentWillReceiveProps(nProps: FormProps){
+        this.setState((state) => ({
+            disabled: nProps.inputValue === ""
+        }));
+    }
+
+    onInputChanged(input: string): void {
+        this.props.setInputValue(input);
+    } 
 
     render () {
         return (
@@ -17,10 +35,12 @@ export default class FormComponent extends React.Component<FormProps> {
             <Input
             label={"Todo"}
             value={this.props.inputValue}
-            onChange={this.props.setInputValue}
+            onChange={this.onInputChanged.bind(this)}
             placeholder={"Type here..."}
             />
-            <Button onClick={this.props.handleSubmit} 
+            <div className="min-gap"></div>
+            <Button onClick={this.props.handleSubmit}
+             disabled={this.state.disabled}
             primary
             label="Submit" />
         </div>

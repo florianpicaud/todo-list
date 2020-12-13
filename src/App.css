@@ -22,6 +22,7 @@
 
   background-color: var(--light-background-color);
   height: 100vh;
+  overflow: hidden;
 }
 
 h1 {

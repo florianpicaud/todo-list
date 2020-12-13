@@ -12,7 +12,7 @@ export default class TodoComponent extends React.Component<TodoProps> {
 
     render(){
         return (
-            <div key={this.props.todo.id} className="todo">
+            <div key={this.props.todo.id} className="d-flex todo">
               <span className="todo-text">
                 {this.props.index + 1}. {this.props.todo.text}
               </span>
