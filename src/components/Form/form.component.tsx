@@ -38,7 +38,6 @@ export default class FormComponent extends React.Component<FormProps, FormState>
             onChange={this.onInputChanged.bind(this)}
             placeholder={"Type here..."}
             />
-            <div className="min-gap"></div>
             <Button onClick={this.props.handleSubmit}
              disabled={this.state.disabled}
             primary
