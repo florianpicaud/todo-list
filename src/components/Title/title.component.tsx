@@ -1,7 +1,7 @@
 import React from "react";
 import "./title.css";
 
-type TitleProps = {
+export type TitleProps = {
     name: string;
 }
 

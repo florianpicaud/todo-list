@@ -5,7 +5,7 @@ import FormComponent from '../Form/form.component';
 import TodoComponent from '../Todo/todo.component';
 import './todo-list.css';
 
-type TodoListState = {
+export type TodoListState = {
     name: string;
     inputValue: string;
     todos: Todo[];

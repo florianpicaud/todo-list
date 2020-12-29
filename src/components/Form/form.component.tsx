@@ -3,7 +3,7 @@ import Button from '../Button/button.component';
 import Input from '../Input/input.component';
 import './form.css';
 
-type FormProps = {
+export type FormProps = {
     inputValue: string;
     setInputValue: (input: string) => void;
     handleSubmit: () => void;
@@ -15,8 +15,13 @@ type FormState = {
 
 export default class FormComponent extends React.Component<FormProps, FormState> {
 
-    state: FormState = {
-        disabled: true
+    state: FormState;
+
+    constructor(props: FormProps) {
+        super(props);
+        this.state = {
+            disabled: props.inputValue === ""
+        };
     }
 
     componentWillReceiveProps(nProps: FormProps){

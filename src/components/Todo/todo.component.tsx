@@ -2,7 +2,7 @@ import React from 'react';
 import "./todo.css";
 import { Todo } from './todo.model';
 
-type TodoProps = {
+export type TodoProps = {
     todo: Todo;
     index: number;
     handleDeleteTodo: (id: number) => void;

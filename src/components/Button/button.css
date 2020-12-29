@@ -1,11 +1,11 @@
-.button {
+.btn {
   color: white;
   background-color: black;
   height: 40px;
   border-radius: 4px;
   padding: 8px 12px;
   text-align: center;
-  border: none;
+  border: 1px solid black;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -14,45 +14,53 @@
   text-align: center;
   letter-spacing: 0.1px;
   display: flex;
+  box-sizing: border-box;
 }
 
-.button:hover:not(:disabled) {
+.btn:hover:not(:disabled) {
   background-color: #222222;
+  cursor: pointer;
 }
 
-.btn-primary {
+.btn:focus {
+  outline: none;
+}
+
+.btn--primary {
   color: white;
   background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
-.btn-primary:hover:not(:disabled) {
+.btn--primary:hover:not(:disabled) {
   color: white;
   background-color: var(--primary-hover-color);
 }
 
-.btn-primary:active {
+.btn--primary:active,
+.btn--primary:active:hover {
   color: rgba(255, 255, 255, 0.8);
   background-color: var(--primary-hover-color);
 }
 
-.btn-primary:disabled {
+.btn--primary:disabled {
   opacity: 0.2;
 }
 
-.btn-secondary {
+.btn--secondary {
   color: var(--primary-color);
   background-color: white;
   border: 1px solid var(--primary-color);
-  box-sizing: border-box;
 }
 
-.btn-secondary:hover:not(:disabled),
-.btn-secondary:active {
+.btn--secondary:hover:not(:disabled),
+.btn--secondary:active,
+.btn--secondary:active:hover {
   color: var(--primary-hover-color);
   border-color: var(--primary-hover-color);
   background-color: white;
 }
 
-.btn-secondary:disabled {
+.btn--secondary:disabled {
   opacity: 0.2;
 }
